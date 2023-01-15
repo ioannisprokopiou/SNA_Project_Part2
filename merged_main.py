@@ -3,6 +3,7 @@ import pickle
 import pandas as pd
 import math
 from cdlib import algorithms, readwrite
+from tqdm import tqdm
 
 # Read the first Graph and start looping from the 2nd day (Graph_01)
 first_file = 'day_graphs/'+'Graph_0'
@@ -14,7 +15,7 @@ for e in prev_G.edges():
     prev_G[e[0]][e[1]]['weight'] = 1
 
 # Loop all the Graphs to combine them to 1
-for i in range(1, 63):
+for i in tqdm(range(1, 63)):
     file = 'day_graphs/'+'Graph_'+str(i)
 
     G = pickle.load(open(file, 'rb'))
@@ -79,7 +80,7 @@ graph_data = pd.DataFrame(columns=['Node', 'Party', 'Modularity Class', 'Degree'
                                    'Left Percentage', 'Right Percentage', 'Middle Percentage', 'Neutral Percentage'])
 
 # Loop the Combined Graph nodes to calculate the weighted percentages of the neighbors' parties
-for n in G.nodes():
+for n in tqdm(G.nodes()):
 
     left_neighbors = 0
     right_neighbors = 0
@@ -123,7 +124,7 @@ for n in G.nodes():
             middle_perc = middle_neighbors/total_parties
             neutral_perc = neutral_neighbors/total_parties
 
-    graph_data.loc[len(graph_data)] = [n, ne_party, G.nodes[n]['Community'],
+    graph_data.loc[len(graph_data)] = [n, G.nodes[n]['party'], G.nodes[n]['Community'],
                                        G.degree[n], left_perc, right_perc, middle_perc, neutral_perc]
 
 graph_data.to_csv(f'CSV outputs/composed_graph.csv', index=False)
