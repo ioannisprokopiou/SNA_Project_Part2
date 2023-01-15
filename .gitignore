@@ -1,7 +1,4 @@
 /.DS_Store
-/CSV outputs
-/Communities
-/Gexf Files
 /GraphML Files
 /NewFolder
 /PyPlots
@@ -13,7 +10,6 @@
 /day_graphs
 /graph_visuals.py
 /main_1.py
-/main_composed.py
 /main_composed.py_pseudo.txt
 /merge_graph.py
 /node_attributes
