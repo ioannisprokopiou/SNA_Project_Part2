@@ -123,7 +123,7 @@ for n in G.nodes():
             middle_perc = middle_neighbors/total_parties
             neutral_perc = neutral_neighbors/total_parties
 
-    graph_data.loc[len(graph_data)] = [n, party, G.nodes[n]['Community'],
+    graph_data.loc[len(graph_data)] = [n, ne_party, G.nodes[n]['Community'],
                                        G.degree[n], left_perc, right_perc, middle_perc, neutral_perc]
 
 graph_data.to_csv(f'CSV outputs/composed_graph.csv', index=False)
