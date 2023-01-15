@@ -16,6 +16,12 @@ source mypython/bin/activate
 
 pip install -r requirements.txt
 
+# Process
+
+**main.py** contains the process to read every graph inside the day_graphs folder and produce a CSV file for every graph in order to be used in our model
+
+**merged_main.py** contains the process of combining all the daily graphs into a single combined graph and the production of the corresponding CSV file for the model
+
 # Information about the data
 
 ## The Day Graphs folder
