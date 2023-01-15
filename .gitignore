@@ -1,0 +1,27 @@
+/.DS_Store
+/CSV outputs
+/Communities
+/Gexf Files
+/GraphML Files
+/NewFolder
+/PyPlots
+/Readme.md
+/__pycache__
+/check_node_degree.py
+/check_persistant_degrees.py
+/composed_graph.gexf
+/day_graphs
+/graph_visuals.py
+/main_1.py
+/main_composed.py
+/main_composed.py_pseudo.txt
+/merge_graph.py
+/node_attributes
+/persistant_subgraphs.py
+/product_csv.py
+/pseudocode.py
+/reccurent_nodes.xlsx
+/recurrency.py
+/test_outputs
+/totalmerge.py
+/venv
