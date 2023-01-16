@@ -1,5 +1,9 @@
 # Instructions
 
+## Colab notebook link
+https://colab.research.google.com/drive/1L0PJS6Tm8TaWxnB7iTZBmwTVdCFV3lEV#scrollTo=iLaIHPIzVkKY
+
+## Run locally
 ### Create a Virtual Enviroment
 python -m venv venv
 
